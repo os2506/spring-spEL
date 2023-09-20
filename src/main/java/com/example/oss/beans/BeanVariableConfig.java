@@ -5,11 +5,10 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class BeanVariableConfig {
-	
-	
-    @Bean
-    String myVariable() {
-        return "Hello from myVariable!";
-    }
+
+	@Bean
+	String myVariable() {
+		return "Hello from myVariable!";
+	}
 
 }

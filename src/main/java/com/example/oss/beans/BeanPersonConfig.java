@@ -8,12 +8,12 @@ import com.example.oss.entity.Person;
 @Configuration
 public class BeanPersonConfig {
 
-    @Bean(name = "personBean")
-    Person person() {
-        Person prs = new Person();
-        prs.setName("Name");
-        prs.setAge(30);
-        return prs;
-    }
+	@Bean(name = "personBean")
+	Person person() {
+		Person prs = new Person();
+		prs.setName("Name");
+		prs.setAge(30);
+		return prs;
+	}
 
 }

@@ -18,8 +18,7 @@ public class SpringExpressionsApplication {
 
 		// Create the SpEL parser
 		ExpressionParser parser = new SpelExpressionParser();
-		
-		
+
 		System.out.println("********************************************");
 
 		try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
@@ -42,24 +41,23 @@ public class SpringExpressionsApplication {
 			System.out.println("Name: " + name);
 			System.out.println("Age: " + age);
 			System.out.println("Person details: " + details);
-			
-			
+
 			System.out.println("********************************************");
 			ConfigurableApplicationContext cont = new AnnotationConfigApplicationContext(VotingConfig.class);
 
-	        // Retrieve the Person bean from the context
-	        Person personVote = cont.getBean(Person.class);
-	        
-			//Opérateurs conditionnels
-			 if (personVote.isEligibleToVote()) {
-		            System.out.println("This person is eligible to vote.");
-		        } else {
-		            System.out.println("This person is not eligible to vote.");
-		        }
-			 cont.close();
-			 System.out.println("********************************************");
+			// Retrieve the Person bean from the context
+			Person personVote = cont.getBean(Person.class);
+
+			// Opérateurs conditionnels
+			if (personVote.isEligibleToVote()) {
+				System.out.println("This person is eligible to vote.");
+			} else {
+				System.out.println("This person is not eligible to vote.");
+			}
+			cont.close();
+			System.out.println("********************************************");
 		}
-		
+
 		// set variables with StandardEvaluationContext
 		StandardEvaluationContext context = new StandardEvaluationContext();
 		context.setVariable("a", 2);
@@ -79,7 +77,7 @@ public class SpringExpressionsApplication {
 		System.out.println("resultDivision: " + resultDivision);
 
 		System.out.println("********************************************");
-		
+
 		// access to variable from the context spring
 		try (AnnotationConfigApplicationContext context2 = new AnnotationConfigApplicationContext(
 				BeanVariableConfig.class)) {
@@ -87,7 +85,7 @@ public class SpringExpressionsApplication {
 			String result = context2.getBean("myVariable", String.class);
 			System.out.println("var result: " + result);
 		}
-		
+
 		SpringApplication.run(SpringExpressionsApplication.class, args);
 	}
 
