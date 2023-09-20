@@ -17,10 +17,3 @@ public class BeanPersonConfig {
     }
 
 }
-//Bean property
-//Mathematical operations
-//Conditional operators
-//access to variable from the context spring
-//configure dev or prod environnement / Determine the active Spring profile
-//SystemProperty Config 
-//Logic Constants 
